@@ -115,6 +115,14 @@ export const tools = [
         name: "Github",
         image: "/hopstoch.png"
     },
+    {
+        name: "Monorepo",
+        image: "/hop.png"
+    },
+    {
+        name: "Turborepo",
+        image: "/hop.png"
+    }
 ]
 
 export const projects = [
