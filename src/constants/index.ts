@@ -117,11 +117,11 @@ export const tools = [
     },
     {
         name: "Monorepo",
-        image: "/hop.png"
+        image: "/hopstoch.png"
     },
     {
         name: "Turborepo",
-        image: "/hop.png"
+        image: "/hopstoch.png"
     }
 ]
 
