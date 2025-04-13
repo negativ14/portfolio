@@ -87,13 +87,7 @@ export default function Contact() {
                             />
 
                             {/* Replace SafeEmailInput with a regular input if it doesn't support 'name' prop */}
-                            <input
-                                type="email"
-                                name="from_email"
-                                placeholder="Email"
-                                className="w-full border-2 border-purple-500 rounded-lg py-2 px-4 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                                required
-                            />
+                            <SafeEmailInput />
 
                             <textarea
                                 name="message"
