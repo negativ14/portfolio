@@ -39,10 +39,10 @@ export default function Hero() {
                 {/* Right Image Section */}
                 <div className="flex justify-center items-center">
                     <Image
-                        src="/vercel.svg"
+                        src="/portfolio.png"
                         alt="Developer"
-                        width={350}
-                        height={350}
+                        width={2000}
+                        height={2000}
                         className="z-30"
                     />
                 </div>
