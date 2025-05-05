@@ -9,7 +9,7 @@ export const Footer = () => {
                 }}
             ></div>
 
-            {/* Footer content */}
+            
             <div className="text-center text-gray-300 text-lg">
                 <h1>Thanks for visiting...</h1>
             </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import CircleButton from "./ui/CircleButton";
 import Twitter from "./icons/Twitter";
@@ -11,57 +11,54 @@ import { useRef } from "react";
 import toast from "react-hot-toast";
 
 export default function Contact() {
-
-    // const form = useRef<HTMLFormElement | string>()
     const form = useRef<HTMLFormElement | null>(null);
 
     const sendEmail = (e: any) => {
         e.preventDefault();
 
-        // console.log(process.env.SERVICE_ID!, process.env.TEMPLATE_ID!)
-
         emailjs
-            .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form.current as HTMLFormElement, {
-                publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-            })
+            .sendForm(
+                process.env.NEXT_PUBLIC_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+                form.current as HTMLFormElement,
+                {
+                    publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+                }
+            )
             .then(
                 () => {
-                    toast.success("Mail sent successfully")
+                    toast.success("Mail sent successfully");
                 },
                 (error) => {
-                    toast.error("Failed to send Mail!")
-                    console.log('FAILED...', error.text);
-                },
+                    toast.error("Failed to send Mail!");
+                    console.log("FAILED...", error.text);
+                }
             );
     };
-
 
     return (
         <section id="contact" className="mt-20 mb-12 md:mb-2 px-6 sm:px-10 lg:px-20 relative z-30">
             <div className="w-full max-w-5xl mx-auto">
-
                 <SectionHeading title="Contact me" />
 
-                {/* Contact Content */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mt-6 md:mt-24">
-                    {/* Left Part */}
-                    <div className="flex-1 space-y-6 text-lg text-white px-10 md:px-0">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mt-6 md:mt-24">
 
-                        <div className="flex items-center gap-3 mr-18 md:mr-0  mt-4 md:mt-8 justify-center md:justify-start">
+                    <div className="flex-1 space-y-6 text-lg text-white px-4 sm:px-10 md:px-0 text-center md:text-left">
+                        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mt-4 md:mt-8">
                             <Image src="/mail.png" alt="email" width={30} height={30} />
                             <span>email.rohitmehta@gmail.com</span>
                         </div>
 
-                        <div className="flex items-center gap-3 mr-8 md:mr-0 justify-center md:justify-start">
+                        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
                             <Image src="/location.png" alt="location" width={30} height={30} />
                             <span>S.H.Town, Ballari, Karnataka, India</span>
                         </div>
 
-                        <div className="hidden md:flex justify-center md:mr-60">
+                        <div className="hidden md:flex justify-center md:justify-start">
                             <Image src="/hire-me-click.png" alt="Hire me" width={250} height={250} className="rounded-xl" />
                         </div>
 
-                        <div className="flex gap-3 md:hidden pt-2 justify-start">
+                        <div className="flex gap-4 md:hidden pt-2 justify-center">
                             <a href="https://twitter.com/RohitMehta1409" target="_blank" rel="noopener noreferrer">
                                 <CircleButton svg={<Twitter />} />
                             </a>
@@ -74,10 +71,13 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* Right Part - Contact Form */}
-                    <div >
 
-                        <form ref={form} onSubmit={sendEmail} className="flex-1 w-full md:w-96 space-y-4 px-10 md:px-0">
+                    <div className="flex-1 w-full">
+                        <form
+                            ref={form}
+                            onSubmit={sendEmail}
+                            className="w-full md:w-96 space-y-4 px-4 sm:px-10 md:px-0"
+                        >
                             <input
                                 type="text"
                                 name="from_name"
@@ -86,7 +86,7 @@ export default function Contact() {
                                 required
                             />
 
-                            {/* Replace SafeEmailInput with a regular input if it doesn't support 'name' prop */}
+
                             <SafeEmailInput />
 
                             <textarea
@@ -106,48 +106,9 @@ export default function Contact() {
                                 </button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </section>
     );
 }
-
-
-
-// import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
-
-// export const ContactUs = () => {
-//   const form = useRef();
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs
-//       .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-//         publicKey: 'YOUR_PUBLIC_KEY',
-//       })
-//       .then(
-//         () => {
-//           console.log('SUCCESS!');
-//         },
-//         (error) => {
-//           console.log('FAILED...', error.text);
-//         },
-//       );
-//   };
-
-//   return (
-//     <form ref={form} onSubmit={sendEmail}>
-//       <label>Name</label>
-//       <input type="text" name="user_name" />
-//       <label>Email</label>
-//       <input type="email" name="user_email" />
-//       <label>Message</label>
-//       <textarea name="message" />
-//       <input type="submit" value="Send" />
-//     </form>
-//   );
-// };

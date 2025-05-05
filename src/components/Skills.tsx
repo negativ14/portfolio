@@ -8,7 +8,6 @@ export default function Skills() {
 
             <SectionHeading title="Skills" />
 
-            {/* Skill Sections */}
             <div className="space-y-12 px-12 md:px-32">
 
                 <div>
