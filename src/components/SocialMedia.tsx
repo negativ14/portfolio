@@ -5,7 +5,7 @@ import CircleButton from "./ui/CircleButton";
 
 export const SocialMedia = () => {
     return (
-        <div className="fixed z-30 flex-col gap-y-4 left-10 top-72 hidden md:flex">
+        <div className="fixed z-30 flex-col gap-y-4 left-10 top-72 hidden xl:flex">
             <a href="https://twitter.com/RohitMehta1409" target="_blank" rel="noopener noreferrer">
                 <CircleButton svg={<Twitter />} />
             </a>

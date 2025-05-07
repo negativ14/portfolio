@@ -44,14 +44,18 @@ export default function Contact() {
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mt-6 md:mt-24">
 
                     <div className="flex-1 space-y-6 text-lg text-white px-4 sm:px-10 md:px-0 text-center md:text-left">
-                        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mt-4 md:mt-8">
-                            <Image src="/mail.png" alt="email" width={30} height={30} />
+                        <div className="flex flex-row items-center justify-center md:justify-start gap-3 mt-4 md:mt-8">
+                            <div className="flex justify-center items-center w-8 h-8">
+                                <Image src="/mail.png" alt="email" width={30} height={30} />
+                            </div>
                             <span>email.rohitmehta@gmail.com</span>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
-                            <Image src="/location.png" alt="location" width={30} height={30} />
-                            <span>S.H.Town, Ballari, Karnataka, India</span>
+                        <div className="flex flex-row items-center justify-center md:justify-start gap-3">
+                            <div className="flex justify-center items-center w-8 h-8">
+                                <Image src="/location.png" alt="location" width={30} height={30} />
+                            </div>
+                            <span>S.H.T, Ballari, Karnataka, India</span>
                         </div>
 
                         <div className="hidden md:flex justify-center md:justify-start">
