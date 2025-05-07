@@ -62,7 +62,7 @@ export default function Contact() {
                             <Image src="/hire-me-click.png" alt="Hire me" width={250} height={250} className="rounded-xl" />
                         </div>
 
-                        <div className="flex gap-4 md:hidden pt-2 justify-center">
+                        <div className="flex gap-4 xl:hidden pt-2 justify-center">
                             <a href="https://twitter.com/RohitMehta1409" target="_blank" rel="noopener noreferrer">
                                 <CircleButton svg={<Twitter />} />
                             </a>
