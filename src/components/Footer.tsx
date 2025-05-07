@@ -1,6 +1,21 @@
+"use client"
+import { motion } from "motion/react"
+
 export const Footer = () => {
     return (
-        <footer className="mt-8 my-6 px-4">
+        <motion.footer
+            initial={{
+                y: -50,
+                opacity: 0
+            }}
+            
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+                duration: 0.5,
+                ease: "easeOut",
+            }}
+            className="mt-8 my-6 px-4">
             {/* Gradient divider line */}
             <div
                 className="h-[2px] w-full mb-6"
@@ -9,10 +24,10 @@ export const Footer = () => {
                 }}
             ></div>
 
-            
+
             <div className="text-center text-gray-300 text-lg">
                 <h1>Thanks for visiting...</h1>
             </div>
-        </footer>
+        </motion.footer>
     );
 };

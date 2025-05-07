@@ -2,11 +2,25 @@
 import Image from "next/image";
 import { Button } from "./ui/Button";
 import Download from "./icons/Download";
+import { motion } from "motion/react";
 
 export default function Hero() {
     return (
         <section className="mt-40 px-6 md:px-12 lg:px-24 max-w-screen-xl mx-auto">
-            <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+            <motion.div
+                initial={{
+                    y: -50,
+                    opacity: 0
+                }}
+                animate={{
+                    y: 0,
+                    opacity: 1,
+                }}
+                transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                }}
+                className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
 
                 <div className="text-center md:text-left w-full">
                     <h2 className="text-xl md:text-2xl text-white mb-2 z-30 relative">
@@ -54,7 +68,7 @@ export default function Hero() {
                         className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg z-30"
                     />
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

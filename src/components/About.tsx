@@ -1,8 +1,25 @@
+"use client"
 import SectionHeading from "./ui/SectionHeading";
+import { motion } from "motion/react"
 
 export default function About() {
     return (
-        <section id="about" className="py-20 px-4 md:px-12 lg:px-24 max-w-screen-xl mx-auto relative z-30 mt-16">
+        <motion.section
+            initial={{
+                y: -50,
+                opacity: 0
+            }}
+            // animate={{
+            //     y: 0,
+            //     opacity: 1,
+            // }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+                duration: 0.5,
+                ease: "easeOut",
+            }}
+            id="about" className="py-20 px-4 md:px-12 lg:px-24 max-w-screen-xl mx-auto relative z-30 mt-16">
 
             <SectionHeading title="About me" />
 
@@ -15,6 +32,6 @@ export default function About() {
                 <br /><br />
                 I’m passionate about clean, efficient code and constantly improving. As a <span className="font-semibold">fresher</span>, I’m actively seeking opportunities where I can contribute and grow.
             </p>
-        </section>
+        </motion.section>
     );
 }

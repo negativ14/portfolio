@@ -9,6 +9,7 @@ import SectionHeading from "./ui/SectionHeading";
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 import toast from "react-hot-toast";
+import { motion } from "motion/react"
 
 export default function Contact() {
     const form = useRef<HTMLFormElement | null>(null);
@@ -38,7 +39,19 @@ export default function Contact() {
 
     return (
         <section id="contact" className="mt-20 mb-12 md:mb-2 px-6 sm:px-10 lg:px-20 relative z-30">
-            <div className="w-full max-w-5xl mx-auto">
+            <motion.div
+                initial={{
+                    y: -50,
+                    opacity: 0
+                }}
+               
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                }}
+                className="w-full max-w-5xl mx-auto">
                 <SectionHeading title="Contact me" />
 
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mt-6 md:mt-24">
@@ -112,7 +125,7 @@ export default function Contact() {
                         </form>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -17,6 +17,10 @@ export const frontendSkills = [
         image: "/tailwind.png",
     },
     {
+        name: "Motion",
+        image: "/next.png",
+    },
+    {
         name: "Shadcn UI",
         image: "/shadcn.png",
     },

@@ -1,10 +1,23 @@
+"use client"
 import { backendSkills, database, devops, frontendSkills, tools } from "@/constants";
 import { Button } from "./ui/Button";
 import SectionHeading from "./ui/SectionHeading";
+import { motion } from "motion/react"
 
 export default function Skills() {
     return (
-        <section id="skills" className="mt-2 px-6 sm:px-10 lg:px-20 flex flex-col z-30 relative">
+        <motion.section
+            initial={{
+                y: -50,
+                opacity: 0
+            }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+                duration: 0.5,
+                ease: "easeOut",
+            }}
+            id="skills" className="mt-2 px-6 sm:px-10 lg:px-20 flex flex-col z-30 relative">
 
             <SectionHeading title="Skills" />
 
@@ -97,7 +110,7 @@ export default function Skills() {
 
 
             </div>
-        </section>
+        </motion.section>
 
     )
 }
