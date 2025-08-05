@@ -30,14 +30,14 @@ export default function Hero() {
 
                     <div className="flex md:hidden justify-center">
                         <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent z-30 relative">
-                            Fullstack Developer
+                            Rookie Developer
                         </h1>
                     </div>
 
 
                     <div className="hidden md:flex flex-col items-start text-left">
                         <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent z-30 relative">
-                            Fullstack
+                            Rookie
                         </h1>
                         <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent z-30 relative">
                             Developer
@@ -48,7 +48,7 @@ export default function Hero() {
 
 
                     <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-xl z-30 relative mb-6 mx-auto md:mx-0">
-                        Writing clean code that works, reads well, and feels right. Simple, scalable, and always in dark mode.
+                        whole site Revamp comming soooooonnnnnnnnnnnnnnnnnnnnnnn.
                     </p>
 
                     <div className="flex justify-center md:justify-start items-center">
