@@ -2,6 +2,7 @@ import Image from "next/image";
 import avatar from "@/assets/images/dp.jpg";
 import ModeToggle from "./ui/theme-toggle";
 import GithubIcon from "@/assets/icons/GithubIcon";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   return (
@@ -26,7 +27,11 @@ export default function Navbar() {
           href="https://github.com/negativ14/portfolio"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center p-2 border dark:border-neutral-700 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 active:scale-[0.8] cursor-pointer"
+          className={cn(
+            "inline-flex items-center justify-center p-2 border dark:border-neutral-700 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 active:scale-[0.8] cursor-pointer relative overflow-hidden",
+            "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-10 hover:before:translate-x-10 before:transition-all before:duration-800",
+            "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-15 hover:before:translate-x-10 before:transition-all before:duration-800"
+          )}
         >
           <GithubIcon className="h-4 w-auto text-muted-foreground" />
         </a>

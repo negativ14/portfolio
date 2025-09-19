@@ -20,7 +20,9 @@ export default function ModeToggle() {
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       className={cn(
         "inline-flex justify-center items-center p-2 border rounded-full",
-        "hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:outline-none dark:border-neutral-700 active:scale-[0.8] cursor-pointer"
+        "hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:outline-none dark:border-neutral-700 active:scale-[0.8] cursor-pointer overflow-hidden relative",
+        "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-10 hover:before:translate-x-10 before:transition-all before:duration-800",
+        "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-15 hover:before:translate-x-10 before:transition-all before:duration-800"
       )}
     >
       <AnimatePresence initial={false} mode="wait">
