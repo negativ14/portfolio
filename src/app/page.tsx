@@ -1,3 +1,4 @@
+import Inspiration from "@/components/Inspiration";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import About from "@/sections/About";
@@ -24,6 +25,7 @@ export default function Home() {
       <Stack />
       <Project />
       <Contact />
+      <Inspiration />
       <Footer />
     </main>
   );
