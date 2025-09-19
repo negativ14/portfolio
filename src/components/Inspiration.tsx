@@ -6,7 +6,7 @@ export default function Inspiration() {
         <span className="text-foreground font-mono tracking-tighter underline underline-offset-2">
           Chánh Đại
         </span>{" "}
-        &{" "}
+        &nbsp; & &nbsp;
         <span className="text-foreground font-mono tracking-tighter underline underline-offset-2">
           Manu arora
         </span>
