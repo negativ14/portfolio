@@ -19,13 +19,16 @@ export default function Contact() {
           href="mailto:email.rohitmehta@gmail.com"
           target="_blank"
           rel="noopner noreferrer"
-          className="flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer"
+          className={cn(
+            "flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer",
+            activeId === "mail" && "bg-secondary/50"
+          )}
         >
           <div
             className={cn(
               "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] dark:border p-2 size-10 rounded-lg flex justify-center items-center relative cursor-pointer overflow-hidden",
               "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-3 before:absolute before:rotate-25 before:-translate-x-10 hover:before:translate-x-10 before:transition-all before:duration-400",
-              activeId === "mail" ? "before:translate-x-10" : ""
+              "active:before:translate-x-10"
             )}
           >
             <MailIcon className="h-4.5" />
@@ -44,7 +47,10 @@ export default function Contact() {
           href="https://x.com/RohitMehta1409"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer"
+          className={cn(
+            "flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer",
+            activeId === "x" && "bg-secondary/50"
+          )}
         >
           <div
             className={cn(
