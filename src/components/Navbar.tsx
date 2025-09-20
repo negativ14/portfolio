@@ -9,6 +9,7 @@ export default function Navbar() {
     <nav className="w-full bg-background border-y px-4 py-2.5 flex justify-between items-center gap-4 shadow-md">
       <div className="flex items-center gap-2">
         <Image
+          loading="lazy"
           src={avatar}
           alt="avatar"
           height={100}

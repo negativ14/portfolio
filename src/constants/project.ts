@@ -12,9 +12,9 @@ export interface ProjectItem {
   image: StaticImageData;
   techstack: string[];
   title: string;
-  description?: string;
-  link?: string;
-  repo?: string;
+  description: string;
+  link: string;
+  repo: string;
 }
 
 export const projects: ProjectItem[] = [
@@ -35,6 +35,8 @@ export const projects: ProjectItem[] = [
       "tailwind",
       "shadcn",
     ],
+    link: "https://cutt.negativ.in",
+    repo: "https://github.com/negativ14/cutt",
   },
   {
     id: "2",
@@ -51,6 +53,8 @@ export const projects: ProjectItem[] = [
       "tailwind",
       "shadcn",
     ],
+    link: "https://wallet.negativ.in",
+    repo: "https://github.com/negativ14/wallet",
   },
   {
     id: "3",
@@ -59,6 +63,8 @@ export const projects: ProjectItem[] = [
     description:
       "A frontend project focused on modern UI design and layout experimentation.",
     techstack: ["next", "tailwind", "typescript", "motion"],
+    link: "https://layers-negativ.vercel.app",
+    repo: "https://github.com/negativ14/Layers-UI",
   },
   {
     id: "4",
@@ -75,6 +81,8 @@ export const projects: ProjectItem[] = [
       "motion",
       "shadcn",
     ],
+    link: "https://orbitpad.negativ.in",
+    repo: "https://github.com/negativ14/OrbitPad",
   },
   {
     id: "5",
@@ -93,6 +101,8 @@ export const projects: ProjectItem[] = [
       "motion",
       "shadcn",
     ],
+    link: "https://tipjar.negativ.in",
+    repo: "https://github.com/negativ14/TipJar",
   },
   {
     id: "6",
@@ -101,6 +111,8 @@ export const projects: ProjectItem[] = [
     description:
       "A sleek SaaS landing page built to highlight frontend development and design skills.",
     techstack: ["next", "tailwind", "typescript", "motion"],
+    link: "https://light-saas-negativ.vercel.app",
+    repo: "https://github.com/negativ14/Light-SaaS",
   },
   {
     id: "7",
@@ -109,5 +121,7 @@ export const projects: ProjectItem[] = [
     description:
       "A responsive frontend project showcasing interactive UI components and animations.",
     techstack: ["next", "tailwind", "typescript", "motion"],
+    link: "https://xnft-negativ.vercel.app",
+    repo: "https://github.com/negativ14/XNFT",
   },
 ];

@@ -120,3 +120,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+.mask-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 30%,
+    /* not pure white → softer visibility */ rgba(0, 0, 0, 0) 100%
+      /* fully transparent at the end */
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+
+/* Tailwind doesn't support mask-image transition natively, so you can use arbitrary property */
+.group-hover\:mask-fade {
+  transition: -webkit-mask-image 0.3s, mask-image 0.3s;
+}

@@ -10,8 +10,10 @@ export default function Contact() {
       </h2>
 
       <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x border-t mt-4">
-        {/* mail */}
-        <div className="flex items-center px-4 py-3 gap-4">
+        <a
+          href="mailto:email.rohitmehta@gmail.com"
+          className="flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer"
+        >
           <div
             className={cn(
               "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] dark:border p-2 size-10 rounded-lg flex justify-center items-center relative cursor-pointer overflow-hidden",
@@ -27,10 +29,14 @@ export default function Contact() {
               email.rohitmehta@gmail.com
             </p>
           </div>
-        </div>
+        </a>
 
-        {/* Twetter */}
-        <div className="flex items-center px-4 py-3 gap-4">
+        <a
+          href="https://x.com/RohitMehta1409"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center px-4 py-3 gap-4 hover:bg-secondary/50 cursor-pointer"
+        >
           <div
             className={cn(
               "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] dark:border p-2 size-10 rounded-lg cursor-pointer relative overflow-hidden",
@@ -46,7 +52,7 @@ export default function Contact() {
               RohitMehta1409
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );

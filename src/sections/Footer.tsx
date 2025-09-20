@@ -13,7 +13,7 @@ export default function Footer() {
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center p-2  transition-all duration-300 active:scale-[0.8] cursor-pointer"
       >
-        <XIcon className="h-4 w-auto text-muted-foreground" />
+        <XIcon className="h-4 w-auto text-foreground" />
       </a>
     </footer>
   );
