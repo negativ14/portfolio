@@ -5,7 +5,9 @@ export default function Project() {
         Project
       </h2>
 
-      <div className="h-96"></div>
+      <div className="grid md:grid-cols-2 divide-x">
+        
+      </div>
     </main>
   );
 }

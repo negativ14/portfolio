@@ -12,10 +12,11 @@ export default function Home() {
   return (
     <main
       className={cn(
-        "max-w-4xl mx-auto bg-neutral-100 dark:bg-neutral-900 border-x",
+        "max-w-3xl mx-auto bg-neutral-100 dark:bg-neutral-900 border-x",
         "bg-[radial-gradient(var(--color-neutral-200)_1.2px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)]",
         "[background-size:10px_10px]",
-        "flex flex-col gap-4"
+        "flex flex-col gap-4",
+        "selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black relative"
       )}
     >
       <Header>

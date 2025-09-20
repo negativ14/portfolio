@@ -5,19 +5,28 @@ export default function About() {
         About Me
       </h1>
 
-      <p className="font-mono text-sm text-muted-foreground py-2 px-4 leading-6">
-        Hi there, I&apos;m <span className="text-foreground underline underline-offset-2">Rohit</span>.
-        I&apos;m a <span className="text-foreground underline underline-offset-2">design engineer</span> and
-        a BCA graduate, with a focus on building{" "}
-        <span className="text-foreground underline underline-offset-2">front-end</span> applications. I make{" "}
-        <span className="text-foreground underline underline-offset-2">clean UIs</span> with attention to
-        small details.
-      </p>
-
-      <p className="font-mono text-sm text-muted-foreground py-2 px-4 leading-6 mt-6 md:indent-48">
-        I mostly enjoy crafting <span className="text-foreground underline underline-offset-2">UIs with subtle animations</span> and a focus on
-        simplicity and clarity. My goal is always to keep things clean while
-        making the interface feel alive.
+      <p className="font-mono text-sm text-muted-foreground py-2 px-4 leading-8 tracking-wide">
+        Hi there, I&apos;m{" "}
+        <span className="text-foreground underline underline-offset-2 font-semibold">
+          Rohit
+        </span>
+        . I&apos;m a{" "}
+        <span className="text-foreground underline underline-offset-2 font-semibold">
+          design engineer
+        </span>{" "}
+        and a BCA graduate, with a focus on building{" "}
+        <span className="text-foreground underline underline-offset-2 font-semibold">
+          front-end
+        </span>{" "}
+        applications. I make{" "}
+        <span className="text-foreground underline underline-offset-2 font-semibold">
+          clean UIs
+        </span>{" "}
+        with{" "}
+        <span className="text-foreground underline underline-offset-2 font-semibold">
+          subtle animations{" "}
+        </span>{" "}
+        and attention to small details.
       </p>
     </main>
   );

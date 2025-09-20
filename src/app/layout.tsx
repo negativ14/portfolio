@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "I design, I code, I break things, then pretend it was part of the process. Portfolio of a design engineer who likes making interfaces behave.",
   icons: {
-    icon: "/dp.jpg",
+    icon: "/favicon.png",
   },
 };
 
