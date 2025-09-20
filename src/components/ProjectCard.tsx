@@ -40,6 +40,7 @@ export default function ProjectCard({
                 alt="project image"
                 data-img={title}
                 loading="lazy"
+                placeholder="blur"
                 className="object-cover rounded-xl group-hover:scale-105 transition-all duration-300 group-hover:blur-[1px]"
               />
               <div
