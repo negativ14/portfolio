@@ -30,8 +30,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className={cn(
             "inline-flex items-center justify-center p-2 border dark:border-neutral-700 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 active:scale-[0.8] cursor-pointer relative overflow-hidden",
-            "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-10 hover:before:translate-x-10 before:transition-all before:duration-400",
-            "active:before:translate-x-10"
+            "before:content-[''] before:bg-white before:h-10 before:blur-sm before:w-4 before:absolute before:rotate-25 before:-translate-x-10 hover:before:translate-x-10 before:transition-all before:duration-400"
           )}
         >
           <GithubIcon className="h-4 w-auto text-muted-foreground" />
