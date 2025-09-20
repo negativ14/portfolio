@@ -1,11 +1,13 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/constants/project";
+import { cn } from "@/lib/utils";
 import { ChevronsDown, ChevronsUp } from "lucide-react";
 import { useState } from "react";
 
 export default function Project() {
   const [expanded, setExpanded] = useState<boolean>(false);
+  const [touched, setTouched] = useState<boolean>(false);
 
   const visibleProjects = expanded ? projects : projects.slice(0, 4);
 
@@ -24,11 +26,7 @@ export default function Project() {
             <ProjectCard
               key={project.id}
               {...project}
-              className={
-                isLastOdd
-                  ? "border-r border-b border-gray-200 dark:border-gray-700"
-                  : ""
-              }
+              className={isLastOdd ? "border-r border-b" : ""}
             />
           );
         })}
@@ -36,7 +34,12 @@ export default function Project() {
 
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full border-t flex justify-center items-center py-2 hover:bg-muted/50 transition-colors group/expand"
+        onTouchStart={() => setTouched(true)}
+        onTouchEnd={() => setTouched(false)}
+        className={cn(
+          "w-full border-t flex justify-center items-center py-2 hover:bg-muted/50 transition-colors group/expand",
+          touched && "bg-muted/50"
+        )}
       >
         {expanded ? "Collapse" : "Expand"}
         {expanded ? (
