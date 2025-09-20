@@ -35,7 +35,7 @@ export default function ProjectCard({
                 loading="lazy"
                 className="object-cover rounded-xl group-hover:scale-105 transition-all duration-300 group-hover:blur-[1px]"
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 active:opacity-100">
                 <h2 className="text-3xl md:text-5xl font-semibold text-white transform translate-y-5 group-hover:translate-y-0 transition-all duration-300">
                   {title}
                 </h2>
