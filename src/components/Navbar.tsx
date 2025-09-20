@@ -3,6 +3,7 @@ import avatar from "@/assets/images/dp.jpg";
 import ModeToggle from "./ui/theme-toggle";
 import GithubIcon from "@/assets/icons/GithubIcon";
 import { cn } from "@/lib/utils";
+import TextAnimation from "./ui/AnimatedText";
 
 export default function Navbar() {
   return (
@@ -17,9 +18,12 @@ export default function Navbar() {
           className="h-7 w-auto rounded-full object-cover border-2 border-neutral-600"
         />
 
-        <h2 className="text-2xl tracking-tight font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-900 dark:bg-gradient-to-b dark:from-neutral-100 dark:to-neutral-400">
-          ROHIT
-        </h2>
+        <TextAnimation
+          texts={["ROHIT", "NEGATIV"]}
+          typingSpeed={100}
+          deletingSpeed={100}
+          pauseDuration={2000}
+        />
       </div>
 
       <div className="flex items-center gap-2 ">
